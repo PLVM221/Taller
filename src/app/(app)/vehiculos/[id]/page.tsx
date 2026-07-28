@@ -3,6 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { vehicles } from "@/lib/demo-data";
 
+export function generateStaticParams() {
+  return vehicles.map((vehicle) => ({ id: vehicle.id }));
+}
+
 export default async function VehicleDetail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params; const vehicle = vehicles.find(v => v.id === id); if (!vehicle) notFound();
   return <div className="mx-auto max-w-6xl space-y-6"><Link href="/vehiculos" className="inline-flex items-center gap-2 text-sm font-bold text-black/50 hover:text-ink"><ArrowLeft size={16} />Volver a vehículos</Link>

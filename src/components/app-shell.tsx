@@ -60,7 +60,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       {mobile && <button className="fixed inset-0 z-40 bg-black/30 lg:hidden" onClick={() => setMobile(false)} aria-label="Cerrar menú" />}
       <aside className={cn("fixed inset-y-0 left-0 z-50 flex w-[248px] -translate-x-full flex-col border-r border-black/[.06] bg-[#10251e] text-white transition lg:sticky lg:top-0 lg:h-screen lg:translate-x-0", mobile && "translate-x-0")}>
         <div className="flex h-24 items-center gap-3 px-4">
-          <Image src="/rojas-mecanica.jfif" alt="Rojas Mecánica" width={190} height={64} priority className="h-auto w-[185px] rounded-lg object-contain" />
+          <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/rojas-mecanica.jfif`} alt="Rojas Mecánica" width={190} height={64} priority className="h-auto w-[185px] rounded-lg object-contain" />
           <button className="ml-auto lg:hidden" onClick={() => setMobile(false)} aria-label="Cerrar menú"><X /></button>
         </div>
         <nav className="flex-1 space-y-1 px-3 py-4" aria-label="Navegación principal">

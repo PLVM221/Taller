@@ -4,6 +4,10 @@ import { notFound } from "next/navigation";
 import { customers, vehicles } from "@/lib/demo-data";
 import { money } from "@/lib/utils";
 
+export function generateStaticParams() {
+  return customers.map((customer) => ({ id: customer.id }));
+}
+
 export default async function CustomerDetail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params; const customer = customers.find(c => c.id === id); if (!customer) notFound();
   const owned = vehicles.filter(v => v.customerId === id);
