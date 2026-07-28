@@ -14,3 +14,4 @@
 | 18:15 | feat(compras): pedidos con artículos, fecha, pagos parciales y saldo |
 | 18:15 | data(schema): proveedores, pedidos, ítems y pagos a proveedores |
 | 18:17 | test: Prisma generate, build, typecheck, lint y tests OK |
+| 18:20 | fix(compras): persistencia local de proveedores, pedidos y pagos demo |
