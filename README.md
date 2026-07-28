@@ -43,6 +43,8 @@ Credenciales demo:
 - Clientes: búsqueda, alta local navegable y ficha con vehículos/actividad.
 - Vehículos: búsqueda, alta local navegable, tarjetas y ficha histórica.
 - Taller en vivo como vista operativa inicial.
+- Proveedores con alta y datos comerciales.
+- Pedidos por fecha con múltiples artículos, pagos parciales y saldo pendiente.
 - Modelo multiempresa/multisucursal y seed PostgreSQL.
 
 Las altas de UI son demostrativas durante esta fase y viven en el estado de la sesión. El schema y seed dejan preparada la persistencia; conectar Server Actions transaccionales es el primer pendiente técnico de Fase 2.

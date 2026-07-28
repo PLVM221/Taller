@@ -2,7 +2,7 @@
 
 import {
   Bell, CalendarDays, CarFront, ChevronDown, CircleDollarSign, Command,
-  Gauge, LayoutDashboard, Menu, Package, Plus, Search, Settings, Users, Wrench, X
+  Gauge, LayoutDashboard, Menu, Package, Plus, Search, Settings, ShoppingCart, Truck, Users, Wrench, X
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -17,6 +17,8 @@ const navigation = [
   { href: "/vehiculos", label: "Vehículos", icon: CarFront },
   { href: "/ordenes", label: "Órdenes", icon: Wrench },
   { href: "/inventario", label: "Inventario", icon: Package },
+  { href: "/proveedores", label: "Proveedores", icon: Truck },
+  { href: "/compras", label: "Pedidos", icon: ShoppingCart },
   { href: "/caja", label: "Caja", icon: CircleDollarSign }
 ];
 
@@ -24,6 +26,8 @@ const commands = [
   { label: "Nueva orden", href: "/ordenes?nueva=1" },
   { label: "Nuevo cliente", href: "/clientes?nuevo=1" },
   { label: "Nuevo vehículo", href: "/vehiculos?nuevo=1" },
+  { label: "Nuevo proveedor", href: "/proveedores?nuevo=1" },
+  { label: "Nuevo pedido", href: "/compras?nuevo=1" },
   { label: "Crear turno", href: "/turnos?nuevo=1" },
   { label: "Ver caja", href: "/caja" }
 ];
@@ -96,7 +100,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <button onClick={() => { setPalette(false); setCreateOpen(false); }} aria-label="Cerrar"><X size={19} /></button>
             </div>
             <div className="p-2">
-              {(createOpen ? commands.slice(0, 4) : filtered).map((item) => (
+              {(createOpen ? commands.filter((item) => item.label !== "Ver caja") : filtered).map((item) => (
                 <button key={item.href} onClick={() => { router.push(item.href); setPalette(false); setCreateOpen(false); }} className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm font-bold hover:bg-canvas"><span className="grid size-8 place-items-center rounded-lg bg-brand-50 text-brand-700"><Plus size={16} /></span>{item.label}</button>
               ))}
               {!filtered.length && <p className="p-6 text-center text-sm text-black/45">Sin resultados.</p>}
@@ -107,4 +111,3 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
