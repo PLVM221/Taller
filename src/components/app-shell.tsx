@@ -4,6 +4,7 @@ import {
   Bell, CalendarDays, CarFront, ChevronDown, CircleDollarSign, Command,
   Gauge, LayoutDashboard, Menu, Package, Plus, Search, Settings, ShoppingCart, Truck, Users, Wrench, X
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -58,9 +59,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen lg:grid lg:grid-cols-[248px_1fr]">
       {mobile && <button className="fixed inset-0 z-40 bg-black/30 lg:hidden" onClick={() => setMobile(false)} aria-label="Cerrar menú" />}
       <aside className={cn("fixed inset-y-0 left-0 z-50 flex w-[248px] -translate-x-full flex-col border-r border-black/[.06] bg-[#10251e] text-white transition lg:sticky lg:top-0 lg:h-screen lg:translate-x-0", mobile && "translate-x-0")}>
-        <div className="flex h-20 items-center gap-3 px-5">
-          <div className="grid size-10 place-items-center rounded-xl bg-brand-500"><Wrench size={21} strokeWidth={2.5} /></div>
-          <div><p className="font-display text-lg font-bold leading-none">Taller Norte</p><p className="mt-1 text-[11px] font-semibold uppercase tracking-[.15em] text-white/45">Casa central</p></div>
+        <div className="flex h-24 items-center gap-3 px-4">
+          <Image src="/rojas-mecanica.jfif" alt="Rojas Mecánica" width={190} height={64} priority className="h-auto w-[185px] rounded-lg object-contain" />
           <button className="ml-auto lg:hidden" onClick={() => setMobile(false)} aria-label="Cerrar menú"><X /></button>
         </div>
         <nav className="flex-1 space-y-1 px-3 py-4" aria-label="Navegación principal">
@@ -72,8 +72,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <div className="border-t border-white/10 p-3">
           <Link href="/configuracion" className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-white/60 hover:bg-white/[.06] hover:text-white"><Settings size={19} />Configuración</Link>
           <div className="mt-2 flex items-center gap-3 rounded-xl bg-white/[.06] p-3">
-            <div className="grid size-9 place-items-center rounded-full bg-amber text-sm font-extrabold text-ink">MS</div>
-            <div className="min-w-0 flex-1"><p className="truncate text-sm font-bold">Martín Suárez</p><p className="text-xs text-white/45">Propietario</p></div>
+            <div className="grid size-9 place-items-center rounded-full bg-amber text-sm font-extrabold text-ink">L</div>
+            <div className="min-w-0 flex-1"><p className="truncate text-sm font-bold">Lucas</p><p className="text-xs text-white/45">Usuario</p></div>
             <ChevronDown size={15} className="text-white/40" />
           </div>
         </div>

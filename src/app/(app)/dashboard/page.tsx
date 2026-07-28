@@ -20,7 +20,7 @@ export default function DashboardPage() {
   return (
     <div className="mx-auto max-w-[1500px] space-y-6">
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-        <div><p className="text-sm font-bold text-brand-700">Martes, 28 de julio</p><h1 className="mt-1 font-display text-3xl font-bold tracking-tight">Buen día, Martín</h1><p className="mt-1 text-sm text-black/50">Esto está pasando en tu taller ahora.</p></div>
+        <div><p className="text-sm font-bold text-brand-700">Martes, 28 de julio</p><h1 className="mt-1 font-display text-3xl font-bold tracking-tight">Buen día, Lucas</h1><p className="mt-1 text-sm text-black/50">Esto está pasando en tu taller ahora.</p></div>
         <Link href="/taller" className="btn-secondary">Abrir taller en vivo <ArrowRight size={17} /></Link>
       </div>
 

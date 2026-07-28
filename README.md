@@ -8,7 +8,6 @@ Sistema integral de gestión para taller mecánico. Este repositorio contiene la
 - Tailwind CSS y Lucide para sistema visual.
 - PostgreSQL + Prisma para modelo relacional, migraciones y seed.
 - Zod previsto como frontera de validación.
-- JWT firmado en cookie HTTP-only para sesión demo.
 - Componentes server-first; interactividad cliente limitada a formularios, búsqueda y comandos.
 
 La estructura principal:
@@ -28,16 +27,11 @@ prisma/              modelo relacional y seed
 4. Cargar demo: `npm run db:seed`
 5. Iniciar: `npm run dev`
 
-Abrir `http://localhost:3000/login`.
-
-Credenciales demo:
-
-- Email: `admin@tallernorte.com`
-- Contraseña: `Taller2026!`
+Abrir `http://localhost:3000`. El acceso es directo y no requiere credenciales.
 
 ## Fase 1 implementada
 
-- Autenticación demo protegida con sesión firmada.
+- Acceso directo para Lucas, sin pantalla de credenciales.
 - Shell responsive, navegación lateral, acciones rápidas y command palette (`Ctrl+K`).
 - Dashboard operativo con métricas, alertas, facturación y vehículos en taller.
 - Clientes: búsqueda, alta local navegable y ficha con vehículos/actividad.

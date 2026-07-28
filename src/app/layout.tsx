@@ -6,7 +6,7 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 const space = Space_Grotesk({ subsets: ["latin"], variable: "--font-space" });
 
 export const metadata: Metadata = {
-  title: { default: "Taller Norte", template: "%s · Taller Norte" },
+  title: { default: "Rojas Mecánica", template: "%s · Rojas Mecánica" },
   description: "Gestión simple y visual para talleres mecánicos"
 };
 
@@ -17,4 +17,3 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
-

@@ -25,7 +25,7 @@ async function main() {
     create: {
       companyId: company.id,
       branchId: branch.id,
-      name: "Martín Suárez",
+      name: "Lucas",
       email: "admin@tallernorte.com",
       passwordHash: await bcrypt.hash("Taller2026!", 12),
       role: "OWNER"
