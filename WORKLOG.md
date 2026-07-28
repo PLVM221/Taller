@@ -16,3 +16,4 @@
 | 18:17 | test: Prisma generate, build, typecheck, lint y tests OK |
 | 18:20 | fix(compras): persistencia local de proveedores, pedidos y pagos demo |
 | 18:30 | feat(acceso): acceso directo sin credenciales, usuario Lucas y logo Rojas Mecánica |
+| 18:55 | deploy: configuración de hosting público en Sites |
