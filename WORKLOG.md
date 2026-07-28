@@ -18,3 +18,4 @@
 | 18:30 | feat(acceso): acceso directo sin credenciales, usuario Lucas y logo Rojas Mecánica |
 | 18:55 | deploy: configuración de hosting público en Sites |
 | 19:00 | fix(deploy): generación automática de Prisma durante instalación |
+| 19:10 | build(deploy): artefacto OpenNext para Cloudflare validado |
